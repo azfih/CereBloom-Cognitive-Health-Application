@@ -77,7 +77,7 @@ Patients book appointments with verified doctors, pay through Stripe, and consul
 ## System Architecture
 
 <!-- Insert architecture diagram here -->
-![System architecture](/images/architectural-diagram.png)
+![System architecture](images/architectural%20diagram.png)
 
 The mobile client (Flutter, BLoC state management) communicates with Firebase for authentication, data storage, file storage and messaging. Media-based assessment tasks (audio, image, drawing, scan) are sent to a Python FastAPI service that hosts the speech, NLP, vision and CNN components. Payments are handled through the Stripe SDK.
 
