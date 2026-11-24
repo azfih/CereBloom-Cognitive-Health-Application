@@ -11,6 +11,11 @@ Authors: Hifza Rafiq, Hafsah Tariq | Supervisor: Ms. Qanetah Ahmed
 
 Early detection of cognitive decline depends on structured history-taking, standardised cognitive testing and, where indicated, neuroimaging. These steps are time-consuming for clinicians and difficult to repeat over time. CereBloom is a mobile health system that automates the first-stage screening pathway and supports continued monitoring. It combines (i) verified history-taking forms, (ii) an AI-driven MMSE that accepts text, speech, image and drawing responses, (iii) optional MRI/CT analysis using a convolutional neural network, and (iv) a report generator that aggregates these sources into domain-level severity scores (memory, attention, language, executive function) with targeted recommendations. The system also provides gamified cognitive exercises, a daily wellness tracker, and a tele-consultation layer (appointments, payments, chat, audio and video calls) that connects patients with verified specialists.
 
+## Demonstration
+
+Demonstration videos covering the patient workflow (history-taking, AI-driven MMSE, imaging analysis), cognitive report generation and recommendations, cognitive games, the daily wellness tracker, and the telehealth module (appointments, payments and consultations) are available at the following link:
+
+[CereBloom demonstration videos](PASTE_DRIVE_LINK)
 ## Background and Objectives
 
 Standard screening instruments such as the MMSE are administered manually, and follow-up depends on in-person visits. Existing consumer applications tend to focus on casual brain training, lack clinically standardised assessment, or do not give clinicians a means to follow a patient's progress remotely. Recent work on fully automated MMSE assessment using computer algorithms [1] and on the cognitive effects of structured brain-training games [2] motivates a system that brings these elements together.
@@ -37,8 +42,7 @@ Patients, doctors and administrators register through role-specific flows. Patie
 
 Patients complete a set of verified history-taking forms covering memory changes, psychological factors and daily functioning. Questions can be read aloud (text-to-speech) and answered by voice (speech-to-text) to reduce the barrier for older users. Each form is weighted according to its clinical relevance, and subsequent sections remain locked until the form is complete.
 
-![Assessment hub](images/assessments.png)
-![Verified history form with voice input](images/verified-form.png)
+
 
 ### 3. AI-Driven MMSE
 
@@ -73,7 +77,7 @@ Patients book appointments with verified doctors, pay through Stripe, and consul
 ## System Architecture
 
 <!-- Insert architecture diagram here -->
-![System architecture](images/architectural diagram.png)
+![System architecture](images/architectural-diagram.png)
 
 The mobile client (Flutter, BLoC state management) communicates with Firebase for authentication, data storage, file storage and messaging. Media-based assessment tasks (audio, image, drawing, scan) are sent to a Python FastAPI service that hosts the speech, NLP, vision and CNN components. Payments are handled through the Stripe SDK.
 
