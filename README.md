@@ -15,7 +15,7 @@ Early detection of cognitive decline depends on structured history-taking, stand
 
 Demonstration videos covering the patient workflow (history-taking, AI-driven MMSE, imaging analysis), cognitive report generation and recommendations, cognitive games, the daily wellness tracker, and the telehealth module (appointments, payments and consultations) are available at the following link:
 
-[CereBloom demonstration videos](PASTE_DRIVE_LINK)
+[CereBloom demonstration videos](https://drive.google.com/drive/folders/10QAv61ZA6zJm-KER4zsf4zowZIc8BZpA)
 ## Background and Objectives
 
 Standard screening instruments such as the MMSE are administered manually, and follow-up depends on in-person visits. Existing consumer applications tend to focus on casual brain training, lack clinically standardised assessment, or do not give clinicians a means to follow a patient's progress remotely. Recent work on fully automated MMSE assessment using computer algorithms [1] and on the cognitive effects of structured brain-training games [2] motivates a system that brings these elements together.
