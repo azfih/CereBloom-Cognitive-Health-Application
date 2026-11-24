@@ -44,28 +44,25 @@ Patients complete a set of verified history-taking forms covering memory changes
 
 The MMSE is organised into five categories: orientation, registration, attention, recall, and language/visual tasks. Responses are collected as text, speech, images or drawings. Speech is transcribed with Whisper, language responses are processed with spaCy, and visual and drawing responses are analysed using OpenCV, NumPy and MediaPipe. Computationally heavy analysis is performed by a FastAPI service, and category-wise scores are stored per user in Firestore.
 
-![AI-driven MMSE category view](images/mmse.png)
+
 
 ### 4. Optional MRI/CT Analysis
 
 Patients may upload a brain MRI or CT image. A CNN-based classifier, served through the FastAPI backend, returns a predicted category with a confidence value and probability scores, which are stored with the user record and passed to the report generator as supporting information.
 
-![MRI upload](images/mri-upload.png)
-![MRI analysis result](images/mri-result.png)
+
 
 ### 5. Cognitive Health Report and Recommendations
 
 The report module aggregates history-form scores, MMSE category scores and, where available, imaging output. It reports an overall score with status and risk level, domain-level scores with severity from "Normal" to "Severe Decline", historical trends over successive evaluations, and recommendations specific to each domain. Reports can be shared with healthcare providers.
 
-![Cognitive health report](images/report.png)
+
 
 ### 6. Gamified Cognitive Exercises and Wellness Tracking
 
 Cognitive exercises (memory pair matching, spot the difference, attention hexagon, merge puzzle) are implemented with the Flame engine. Performance, activity times and streaks are synchronised to Firebase and displayed in progress dashboards. A daily wellness tracker records medication, meals, exercise and meditation, and a mood tracker records day-to-day affect. Weekly recommendations are generated from these data.
 
-![Home dashboard with mood tracking](images/home.png)
-![Daily wellness tracker](images/wellness.png)
-![Cognitive game: spot the difference](images/spot-the-difference.png)
+
 
 ### 7. Tele-Consultation, Appointments and Payments
 
@@ -76,11 +73,9 @@ Patients book appointments with verified doctors, pay through Stripe, and consul
 ## System Architecture
 
 <!-- Insert architecture diagram here -->
-![System architecture](images/architecture.png)
+![System architecture](images/architectural diagram.png)
 
 The mobile client (Flutter, BLoC state management) communicates with Firebase for authentication, data storage, file storage and messaging. Media-based assessment tasks (audio, image, drawing, scan) are sent to a Python FastAPI service that hosts the speech, NLP, vision and CNN components. Payments are handled through the Stripe SDK.
-
-<!-- Insert additional diagrams (data model, sequence diagrams, activity diagrams) here -->
 
 ## Technology Stack
 
